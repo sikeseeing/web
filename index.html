@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Gallery — Sikeseeing</title>
-    <!-- Tailwind CSS -->
+    <title>Portfolio Gallery — Donde Inspired</title>
+    <!-- Tailwind CSS untuk styling cepat & elegan -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Syne & Inter -->
+    <!-- Google Fonts: Syne & Inter untuk kesan High-End Art Agency -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome -->
+    <!-- FontAwesome untuk ikon panah/sosial -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script>
@@ -20,15 +20,16 @@
                         inter: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        sikeseeingBg: '#f2f2f2',   /* Warna background terang sesuai gambar contoh */
-                        sikeseeingCard: '#e5e5e5', /* Warna kartu/elemen pendukung terang */
-                        sikeseeingGray: '#666666', /* Warna teks abu-abu */
+                        dondeDark: '#0a0a0a',
+                        dondeCard: '#141414',
+                        dondeGray: '#888888',
                     }
                 }
             }
         }
     </script>
     <style>
+        /* Kustom transisi & efek ala Qode Donde */
         .project-card img {
             transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -42,36 +43,37 @@
         .project-card:hover .project-overlay {
             opacity: 1;
         }
+        /* Custom scrollbar halus */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #f2f2f2;
+            background: #0a0a0a;
         }
         ::-webkit-scrollbar-thumb {
-            background: #cccccc;
+            background: #262626;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #999999;
+            background: #404040;
         }
     </style>
 </head>
-<body class="bg-sikeseeingBg text-neutral-900 font-inter selection:bg-black selection:text-white antialiased">
+<body class="bg-dondeDark text-white font-inter selection:bg-white selection:text-black antialiased">
 
     <!-- HEADER / NAVIGATION -->
-    <header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 md:px-16 py-6 bg-sikeseeingBg/80 backdrop-blur-md border-b border-black/10">
-        <a href="#" class="font-syne font-extrabold text-2xl tracking-tighter uppercase">Sikeseeing.</a>
+    <header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 md:px-16 py-6 bg-dondeDark/80 backdrop-blur-md border-b border-white/10">
+        <a href="#" class="font-syne font-extrabold text-2xl tracking-tighter uppercase">Donde.</a>
         
         <!-- Menu Navigasi -->
         <nav class="hidden md:flex items-center space-x-10 text-sm font-medium tracking-wide">
-            <a href="#gallery" class="hover:text-sikeseeingGray transition-colors">Portfolio</a>
-            <a href="#about" class="hover:text-sikeseeingGray transition-colors">Studio</a>
-            <a href="#contact" class="hover:text-sikeseeingGray transition-colors">Contact</a>
+            <a href="#gallery" class="hover:text-dondeGray transition-colors">Portfolio</a>
+            <a href="#about" class="hover:text-dondeGray transition-colors">Studio</a>
+            <a href="#contact" class="hover:text-dondeGray transition-colors">Contact</a>
         </nav>
 
         <div class="flex items-center space-x-6">
-            <span class="text-xs uppercase tracking-widest text-sikeseeingGray hidden lg:inline-block">New York, NY</span>
+            <span class="text-xs uppercase tracking-widest text-dondeGray hidden lg:inline-block">New York, NY</span>
             <!-- Mobile Menu Button -->
             <button id="menu-btn" class="md:hidden text-xl focus:outline-none">
                 <i class="fa-solid fa-bars"></i>
@@ -80,33 +82,33 @@
     </header>
 
     <!-- MOBILE MENU OVERLAY -->
-    <div id="mobile-menu" class="fixed inset-0 bg-sikeseeingBg z-40 flex flex-col items-center justify-center space-y-8 text-2xl font-syne hidden">
+    <div id="mobile-menu" class="fixed inset-0 bg-dondeDark z-40 flex flex-col items-center justify-center space-y-8 text-2xl font-syne hidden">
         <button id="close-menu" class="absolute top-6 right-8 text-2xl"><i class="fa-solid fa-xmark"></i></button>
-        <a href="#gallery" class="mobile-link hover:text-sikeseeingGray">Portfolio</a>
-        <a href="#about" class="mobile-link hover:text-sikeseeingGray">Studio</a>
-        <a href="#contact" class="mobile-link hover:text-sikeseeingGray">Contact</a>
+        <a href="#gallery" class="mobile-link hover:text-dondeGray">Portfolio</a>
+        <a href="#about" class="mobile-link hover:text-dondeGray">Studio</a>
+        <a href="#contact" class="mobile-link hover:text-dondeGray">Contact</a>
     </div>
 
     <!-- HERO SECTION -->
     <section class="pt-36 pb-16 px-8 md:px-16 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-black/10 pb-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/10 pb-12">
             <div>
-                <span class="text-xs uppercase tracking-widest text-sikeseeingGray block mb-3 font-semibold">— Portfolio Gallery</span>
+                <span class="text-xs uppercase tracking-widest text-dongeGray block mb-3 font-semibold text-neutral-400">— Portfolio Gallery</span>
                 <h1 class="font-syne font-extrabold text-4xl md:text-7xl tracking-tight max-w-2xl leading-none">
                     Creative Works & Showcases.
                 </h1>
             </div>
-            <p class="text-sikeseeingGray text-sm md:text-base max-w-xs mt-6 md:mt-0">
+            <p class="text-dondeGray text-sm md:text-base max-w-xs mt-6 md:mt-0">
                 A curated collection of branding, digital design, and immersive spatial experiences.
             </p>
         </div>
 
         <!-- FILTER BUTTONS -->
         <div id="filter-container" class="flex flex-wrap gap-4 mt-8 text-sm font-medium">
-            <button data-filter="all" class="filter-btn px-5 py-2 rounded-full border border-black/20 bg-black text-white transition-all">Show All</button>
-            <button data-filter="branding" class="filter-btn px-5 py-2 rounded-full border border-black/20 hover:border-black transition-all text-neutral-600 hover:text-black">Branding</button>
-            <button data-filter="digital" class="filter-btn px-5 py-2 rounded-full border border-black/20 hover:border-black transition-all text-neutral-600 hover:text-black">Digital</button>
-            <button data-filter="print" class="filter-btn px-5 py-2 rounded-full border border-black/20 hover:border-black transition-all text-neutral-600 hover:text-black">Print & Art</button>
+            <button data-filter="all" class="filter-btn px-5 py-2 rounded-full border border-white/20 bg-white text-black transition-all">Show All</button>
+            <button data-filter="branding" class="filter-btn px-5 py-2 rounded-full border border-white/20 hover:border-white transition-all text-neutral-400 hover:text-white">Branding</button>
+            <button data-filter="digital" class="filter-btn px-5 py-2 rounded-full border border-white/20 hover:border-white transition-all text-neutral-400 hover:text-white">Digital</button>
+            <button data-filter="print" class="filter-btn px-5 py-2 rounded-full border border-white/20 hover:border-white transition-all text-neutral-400 hover:text-white">Print & Art</button>
         </div>
     </section>
 
@@ -116,7 +118,7 @@
             
             <!-- Project Item 1 -->
             <div class="portfolio-item group cursor-pointer" data-category="branding">
-                <div class="project-card relative overflow-hidden bg-sikeseeingCard aspect-[4/3] rounded-sm">
+                <div class="project-card relative overflow-hidden bg-dondeCard aspect-[4/3] rounded-sm">
                     <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop" alt="Do Prints" class="w-full h-full object-cover">
                     <div class="project-overlay absolute inset-0 bg-black/60 backdrop-blur-sm flex flex-col justify-between p-8">
                         <span class="text-xs uppercase tracking-widest bg-white/20 w-fit px-3 py-1 rounded-full text-white">Branding</span>
@@ -127,14 +129,14 @@
                     </div>
                 </div>
                 <div class="flex justify-between items-center mt-4">
-                    <h4 class="font-syne font-bold text-lg group-hover:text-neutral-500 transition-colors">Do Prints</h4>
-                    <span class="text-xs uppercase tracking-widest text-sikeseeingGray">Branding / More Info</span>
+                    <h4 class="font-syne font-bold text-lg group-hover:text-neutral-400 transition-colors">Do Prints</h4>
+                    <span class="text-xs uppercase tracking-widest text-dondeGray">Branding / More Info</span>
                 </div>
             </div>
 
             <!-- Project Item 2 -->
             <div class="portfolio-item group cursor-pointer md:mt-16" data-category="digital">
-                <div class="project-card relative overflow-hidden bg-sikeseeingCard aspect-[4/3] rounded-sm">
+                <div class="project-card relative overflow-hidden bg-dondeCard aspect-[4/3] rounded-sm">
                     <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop" alt="Be Free" class="w-full h-full object-cover">
                     <div class="project-overlay absolute inset-0 bg-black/60 backdrop-blur-sm flex flex-col justify-between p-8">
                         <span class="text-xs uppercase tracking-widest bg-white/20 w-fit px-3 py-1 rounded-full text-white">Digital</span>
@@ -145,14 +147,14 @@
                     </div>
                 </div>
                 <div class="flex justify-between items-center mt-4">
-                    <h4 class="font-syne font-bold text-lg group-hover:text-neutral-500 transition-colors">Be Free</h4>
-                    <span class="text-xs uppercase tracking-widest text-sikeseeingGray">Digital / Interaction</span>
+                    <h4 class="font-syne font-bold text-lg group-hover:text-neutral-400 transition-colors">Be Free</h4>
+                    <span class="text-xs uppercase tracking-widest text-dondeGray">Digital / Interaction</span>
                 </div>
             </div>
 
             <!-- Project Item 3 -->
             <div class="portfolio-item group cursor-pointer" data-category="print">
-                <div class="project-card relative overflow-hidden bg-sikeseeingCard aspect-[4/3] rounded-sm">
+                <div class="project-card relative overflow-hidden bg-dondeCard aspect-[4/3] rounded-sm">
                     <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000&auto=format&fit=crop" alt="The Typo" class="w-full h-full object-cover">
                     <div class="project-overlay absolute inset-0 bg-black/60 backdrop-blur-sm flex flex-col justify-between p-8">
                         <span class="text-xs uppercase tracking-widest bg-white/20 w-fit px-3 py-1 rounded-full text-white">Print & Art</span>
@@ -163,14 +165,14 @@
                     </div>
                 </div>
                 <div class="flex justify-between items-center mt-4">
-                    <h4 class="font-syne font-bold text-lg group-hover:text-neutral-500 transition-colors">The Typo</h4>
-                    <span class="text-xs uppercase tracking-widest text-sikeseeingGray">Print / Editorial</span>
+                    <h4 class="font-syne font-bold text-lg group-hover:text-neutral-400 transition-colors">The Typo</h4>
+                    <span class="text-xs uppercase tracking-widest text-dondeGray">Print / Editorial</span>
                 </div>
             </div>
 
             <!-- Project Item 4 -->
             <div class="portfolio-item group cursor-pointer md:mt-16" data-category="branding">
-                <div class="project-card relative overflow-hidden bg-sikeseeingCard aspect-[4/3] rounded-sm">
+                <div class="project-card relative overflow-hidden bg-dondeCard aspect-[4/3] rounded-sm">
                     <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop" alt="Cube of Art" class="w-full h-full object-cover">
                     <div class="project-overlay absolute inset-0 bg-black/60 backdrop-blur-sm flex flex-col justify-between p-8">
                         <span class="text-xs uppercase tracking-widest bg-white/20 w-fit px-3 py-1 rounded-full text-white">Branding</span>
@@ -181,8 +183,8 @@
                     </div>
                 </div>
                 <div class="flex justify-between items-center mt-4">
-                    <h4 class="font-syne font-bold text-lg group-hover:text-neutral-500 transition-colors">Cube of Art</h4>
-                    <span class="text-xs uppercase tracking-widest text-sikeseeingGray">Branding / Exhibition</span>
+                    <h4 class="font-syne font-bold text-lg group-hover:text-neutral-400 transition-colors">Cube of Art</h4>
+                    <span class="text-xs uppercase tracking-widest text-dondeGray">Branding / Exhibition</span>
                 </div>
             </div>
 
@@ -190,30 +192,30 @@
     </section>
 
     <!-- FOOTER / CONTACT SECTION -->
-    <footer id="contact" class="bg-[#e9e9e9] border-t border-black/10 text-neutral-900 px-8 md:px-16 py-20">
+    <footer id="contact" class="bg-dondeCard border-t border-white/10 text-white px-8 md:px-16 py-20">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
-                <h3 class="font-syne font-extrabold text-3xl mb-4 tracking-tighter">Sikeseeing.</h3>
-                <p class="text-sikeseeingGray text-sm">Elevating digital brands through artistic direction and modern web experiences.</p>
+                <h3 class="font-syne font-extrabold text-3xl mb-4 tracking-tighter">Donde.</h3>
+                <p class="text-dondeGray text-sm">Elevating digital brands through artistic direction and modern web experiences.</p>
             </div>
             <div>
-                <h4 class="font-syne font-bold text-sm uppercase tracking-widest mb-4 text-neutral-500">Inquiries</h4>
-                <a href="mailto:sikeseeing@example.com" class="text-lg hover:text-sikeseeingGray transition-colors">sikeseeing@example.com</a>
-                <p class="text-sikeseeingGray text-sm mt-2">(473) 647-558</p>
+                <h4 class="font-syne font-bold text-sm uppercase tracking-widest mb-4 text-neutral-400">Inquiries</h4>
+                <a href="mailto:donteoffice@example.com" class="text-lg hover:text-dondeGray transition-colors">donteoffice@example.com</a>
+                <p class="text-dondeGray text-sm mt-2">(473) 647-558</p>
             </div>
             <div>
-                <h4 class="font-syne font-bold text-sm uppercase tracking-widest mb-4 text-neutral-500">Office</h4>
-                <p class="text-sm text-sikeseeingGray">First Avenue 15<br>New York, NY 10017</p>
+                <h4 class="font-syne font-bold text-sm uppercase tracking-widest mb-4 text-neutral-400">Office</h4>
+                <p class="text-sm text-dondeGray">First Avenue 15<br>New York, NY 10017</p>
                 <div class="flex space-x-4 mt-6 text-lg">
-                    <a href="#" class="hover:text-sikeseeingGray transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="hover:text-sikeseeingGray transition-colors"><i class="fa-brands fa-behance"></i></a>
-                    <a href="#" class="hover:text-sikeseeingGray transition-colors"><i class="fa-brands fa-dribbble"></i></a>
-                    <a href="#" class="hover:text-sikeseeingGray transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="hover:text-dondeGray transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-dondeGray transition-colors"><i class="fa-brands fa-behance"></i></a>
+                    <a href="#" class="hover:text-dondeGray transition-colors"><i class="fa-brands fa-dribbble"></i></a>
+                    <a href="#" class="hover:text-dondeGray transition-colors"><i class="fa-brands fa-twitter"></i></a>
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto border-t border-black/10 mt-16 pt-8 flex flex-col md:flex-row justify-between text-xs text-sikeseeingGray">
-            <p>© 2026 Sikeseeing. Built for GitHub Pages.</p>
+        <div class="max-w-7xl mx-auto border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-between text-xs text-dondeGray">
+            <p>© 2026 Qode Interactive Inspiration. Built for GitHub Pages.</p>
             <p class="mt-4 md:mt-0">All rights reserved.</p>
         </div>
     </footer>
@@ -225,12 +227,14 @@
 
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
+                // Remove active classes from all buttons
                 filterButtons.forEach(btn => {
-                    btn.classList.remove('bg-black', 'text-white');
-                    btn.classList.add('text-neutral-600', 'hover:text-black');
+                    btn.classList.remove('bg-white', 'text-black');
+                    btn.classList.add('text-neutral-400', 'hover:text-white');
                 });
-                button.classList.add('bg-black', 'text-white');
-                button.classList.remove('text-neutral-600', 'hover:text-black');
+                // Add active state to clicked button
+                button.classList.add('bg-white', 'text-black');
+                button.classList.remove('text-neutral-400', 'hover:text-white');
 
                 const filterValue = button.getAttribute('data-filter');
 
@@ -244,6 +248,7 @@
             });
         });
 
+        // Mobile Menu Toggle
         const menuBtn = document.getElementById('menu-btn');
         const closeMenu = document.getElementById('close-menu');
         const mobileMenu = document.getElementById('mobile-menu');
