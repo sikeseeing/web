@@ -88,20 +88,15 @@
 
     <!-- HERO SECTION -->
     <section class="pt-36 pb-16 px-8 md:px-16 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-black/10 pb-12">
-            <div>
-                <span class="text-xs uppercase tracking-widest text-sikeseeingGray block mb-3 font-semibold">— Portfolio Gallery</span>
-                <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-                    <h1 class="font-syne font-extrabold text-4xl md:text-6xl tracking-tight leading-tight">
-                        Commission:
-                    </h1>
-                    <!-- Gambar dari folder lokal images/cut.png -->
-                    <img src="images/cut.png" alt="Ask for Availability" class="h-14 md:h-20 object-contain mix-blend-multiply inline-block">
-                </div>
+        <div class="border-b border-black/10 pb-12">
+            <span class="text-xs uppercase tracking-widest text-sikeseeingGray block mb-3 font-semibold">— Portfolio Gallery</span>
+            <div class="flex flex-col items-start gap-4">
+                <h1 class="font-syne font-extrabold text-5xl md:text-8xl tracking-tight leading-none">
+                    Commission:
+                </h1>
+                <!-- Gambar dipindah ke bawah tulisan Commission dengan ukuran lebih besar -->
+                <img src="images/cut.png" alt="Ask for Availability" class="h-20 md:h-32 object-contain mix-blend-multiply mt-2">
             </div>
-            <p class="text-sikeseeingGray text-sm md:text-base max-w-xs mt-6 md:mt-0">
-                A curated collection of branding, digital design, and immersive spatial experiences.
-            </p>
         </div>
 
         <!-- FILTER BUTTONS -->
@@ -227,44 +222,4 @@
         const portfolioItems = document.querySelectorAll('.portfolio-item');
 
         filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                filterButtons.forEach(btn => {
-                    btn.classList.remove('bg-black', 'text-white');
-                    btn.classList.add('text-neutral-600', 'hover:text-black');
-                });
-                button.classList.add('bg-black', 'text-white');
-                button.classList.remove('text-neutral-600', 'hover:text-black');
-
-                const filterValue = button.getAttribute('data-filter');
-
-                portfolioItems.forEach(item => {
-                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        const menuBtn = document.getElementById('menu-btn');
-        const closeMenu = document.getElementById('close-menu');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-        });
-
-        closeMenu.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-        });
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    </script>
-</body>
-</html>
+            button.addEventListener('click', () =>
