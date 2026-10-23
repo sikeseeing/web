@@ -145,4 +145,123 @@
                     </div>
                 </div>
                 <div class="flex justify-between items-center mt-4">
-                    <h4 class="font-syne font-bold text-lg group-hover:text-neutral-500 transition-colors">
+                    <h4 class="font-syne font-bold text-lg group-hover:text-neutral-500 transition-colors">Be Free</h4>
+                    <span class="text-xs uppercase tracking-widest text-sikeseeingGray">Digital / Interaction</span>
+                </div>
+            </div>
+
+            <!-- Project Item 3 -->
+            <div class="portfolio-item group cursor-pointer" data-category="print">
+                <div class="project-card relative overflow-hidden bg-sikeseeingCard aspect-[4/3] rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000&auto=format&fit=crop" alt="The Typo" class="w-full h-full object-cover">
+                    <div class="project-overlay absolute inset-0 bg-black/60 backdrop-blur-sm flex flex-col justify-between p-8">
+                        <span class="text-xs uppercase tracking-widest bg-white/20 w-fit px-3 py-1 rounded-full text-white">Print & Art</span>
+                        <div>
+                            <p class="text-xs text-neutral-300 mb-1">April 08, 2023</p>
+                            <h3 class="font-syne font-bold text-2xl md:text-3xl text-white">The Typo Magazine</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mt-4">
+                    <h4 class="font-syne font-bold text-lg group-hover:text-neutral-500 transition-colors">The Typo</h4>
+                    <span class="text-xs uppercase tracking-widest text-sikeseeingGray">Print / Editorial</span>
+                </div>
+            </div>
+
+            <!-- Project Item 4 -->
+            <div class="portfolio-item group cursor-pointer md:mt-16" data-category="branding">
+                <div class="project-card relative overflow-hidden bg-sikeseeingCard aspect-[4/3] rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop" alt="Cube of Art" class="w-full h-full object-cover">
+                    <div class="project-overlay absolute inset-0 bg-black/60 backdrop-blur-sm flex flex-col justify-between p-8">
+                        <span class="text-xs uppercase tracking-widest bg-white/20 w-fit px-3 py-1 rounded-full text-white">Branding</span>
+                        <div>
+                            <p class="text-xs text-neutral-300 mb-1">February 06, 2023</p>
+                            <h3 class="font-syne font-bold text-2xl md:text-3xl text-white">Cube of Art Gallery</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mt-4">
+                    <h4 class="font-syne font-bold text-lg group-hover:text-neutral-500 transition-colors">Cube of Art</h4>
+                    <span class="text-xs uppercase tracking-widest text-sikeseeingGray">Branding / Exhibition</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACT SECTION -->
+    <footer id="contact" class="bg-[#e9e9e9] border-t border-black/10 text-neutral-900 px-8 md:px-16 py-20">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+                <h3 class="font-syne font-extrabold text-3xl mb-4 tracking-tighter">Sikeseeing.</h3>
+                <p class="text-sikeseeingGray text-sm">Elevating digital brands through artistic direction and modern web experiences.</p>
+            </div>
+            <div>
+                <h4 class="font-syne font-bold text-sm uppercase tracking-widest mb-4 text-neutral-500">Inquiries</h4>
+                <a href="mailto:sikeseeing@example.com" class="text-lg hover:text-sikeseeingGray transition-colors">sikeseeing@example.com</a>
+                <p class="text-sikeseeingGray text-sm mt-2">(473) 647-558</p>
+            </div>
+            <div>
+                <h4 class="font-syne font-bold text-sm uppercase tracking-widest mb-4 text-neutral-500">Office</h4>
+                <p class="text-sm text-sikeseeingGray">First Avenue 15<br>New York, NY 10017</p>
+                <div class="flex space-x-4 mt-6 text-lg">
+                    <a href="#" class="hover:text-sikeseeingGray transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-sikeseeingGray transition-colors"><i class="fa-brands fa-behance"></i></a>
+                    <a href="#" class="hover:text-sikeseeingGray transition-colors"><i class="fa-brands fa-dribbble"></i></a>
+                    <a href="#" class="hover:text-sikeseeingGray transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-black/10 mt-16 pt-8 flex flex-col md:flex-row justify-between text-xs text-sikeseeingGray">
+            <p>© 2026 Sikeseeing. Built for GitHub Pages.</p>
+            <p class="mt-4 md:mt-0">All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE FILTER JAVASCRIPT -->
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-black', 'text-white');
+                    btn.classList.add('text-neutral-600', 'hover:text-black');
+                });
+                button.classList.add('bg-black', 'text-white');
+                button.classList.remove('text-neutral-600', 'hover:text-black');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
